@@ -18,6 +18,7 @@ const Dummy_Data =[
         PC: "no",
         id: 1,
         photoURL: "../Images/Xenoblade2.png",
+        buyLink: "https://www.amazon.com/Xenoblade-Chronicles-2-Nintendo-Switch/dp/B01MU9VUKN/ref=sr_1_1?crid=OB7OZZF2DF6P&keywords=xenoblade%2Bchronicles%2B2&qid=1682472436&sprefix=xenoblade%2Bchr%2Caps%2C88&sr=8-1&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc&th=1"
     },
 
     {
@@ -32,6 +33,7 @@ const Dummy_Data =[
       PC: "yes",
       id: 2,
       photoURL: "../Images/Persona5R.png",
+      buyLink: "https://www.amazon.com/Persona-5-Royal-Standard-PlayStation/dp/B0BFDZDTJ8/ref=sr_1_1?keywords=persona+5+royal&qid=1682472528&sprefix=persona+5+%2Caps%2C89&sr=8-1",
   },
 ];
 
