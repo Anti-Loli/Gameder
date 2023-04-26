@@ -46,6 +46,7 @@ const Dummy_Data =[
     PC: "yes",
     id: 3,
     photoURL: "../Images/EldenRing.png",
+    buyLink: "https://www.amazon.com/Elden-Ring-PlayStation-5/dp/B09743F8P6?th=1",
 },
 
 {
@@ -60,6 +61,7 @@ const Dummy_Data =[
   PC: "yes",
   id: 4,
   photoURL: "../Images/AgeofEmpiresIV.png",
+  buyLink: "https://store.steampowered.com/app/1466860/Age_of_Empires_IV_Anniversary_Edition/",
 },
 
 {
@@ -74,6 +76,7 @@ const Dummy_Data =[
   PC: "yes",
   id: 5,
   photoURL: "../Images/EscapeFromTarkov.png",
+  buyLink: "https://www.escapefromtarkov.com/preorder-page",
 },
 ];
 
