@@ -9,7 +9,7 @@ const Dummy_Data =[
     {
         name: "Xenoblade Chronicles 2",
         genre: "JRPG",
-        description: "Xenoblade Chronicles 2 is a 2017 action role-playing game developed by Monolith Soft and published by Nintendo for the Nintendo Switch.",
+        description: "Xenoblade Chronicles 2 is a 2017 action role-playing game developed by Monolith Soft and published by Nintendo.",
         metacritic: 83,
         similarTo: "Dragon Quest",
         xbox: "no",
@@ -89,24 +89,21 @@ export default function HomeScreen({ navigation }) {
                 },
               }}
               renderCard={(card) => (
-                <View key ={card.id}  style={[styles.card, styles.cardShadow]}>
+                <View key ={card.id}  style={styles.card}>
                   
                 <Image 
-                  styles={{ width: 500, height: 0}}
-                  source={require("../Images/Xenoblade2.png")}
+                  style={styles.cardImage}
+                  source={{uri : card.photoURL}}
                 />
-                  
-                  
-                  <Text>{card.name}</Text>
-                  <Text>{card.genre}</Text>
-                  <Text>{card.description}</Text>
-
-                  <Text>Metacritic score: {card.metacritic}</Text>
-                  <Text>Similar to games like: {card.similarTo}</Text>
-                  <Text>Xbox: {card.xbox}</Text>
-                  <Text>Playstation: {card.playstation}</Text>
-                  <Text>Nintendo Switch: {card.nintendo}</Text>
-                  <Text>PC: {card.PC}</Text>
+                  <Text style={styles.text}>{card.name}</Text>
+                  <Text style={styles.text}>{card.genre}</Text>
+                  <Text style={styles.text}>{card.description}</Text>
+                  <Text style={styles.text}>Metacritic score: {card.metacritic}</Text>
+                  <Text style={styles.text}>Similar to games like: {card.similarTo}</Text>
+                  <Text style={styles.text}>Xbox: {card.xbox}</Text>
+                  <Text style={styles.text}>Playstation: {card.playstation}</Text>
+                  <Text style={styles.text}>Nintendo Switch: {card.nintendo}</Text>
+                  <Text style={styles.text}>PC: {card.PC}</Text>
 
                 </View>
                 )}/>
