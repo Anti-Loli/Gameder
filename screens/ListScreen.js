@@ -28,7 +28,7 @@ const testData = [
 ];
 
 const renderItem = ({ item }) => (
-  <TouchableOpacity onPress={() => alert("Pressed ${item.name}")}>
+  <TouchableOpacity onPress={() => alert(`Pressed ${item.name}`)}>
     <View>
       <Text>{item.name}</Text>
     </View>
