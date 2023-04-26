@@ -31,7 +31,7 @@ const Dummy_Data =[
       nintendo: "yes",
       PC: "yes",
       id: 2,
-      photoURL: "../Images/Xenoblade2.png",
+      photoURL: "../Images/Persona5R.png",
   },
 ];
 
@@ -55,19 +55,52 @@ export default function HomeScreen({ navigation }) {
 
         <View>
           <Swiper
-              
+              containerStyle={{backgroundColor: "red"}}
               cards={Dummy_Data}
+              stackSize={5}
+              cardIndex={0}
+              animateCardOpacity
+              verticalSwipe={false}
+              onSwipedLeft={() => {
+                console.log("Mid");
+            }}
+              onSwipedRight={() => {
+                  console.log("Saved");
+              }}
+              backgroundColor="red"
+              overlayLabels={{
+                left:{
+                  title: "MID",
+                  style:{
+                    label:{
+                      textAlign: "right",
+                      color: "red",
+                    },
+                  },
+                },
+                right: {
+                  title: "SAVED",
+                  style:{
+                    label:{
+                      textAlign: "left",
+                      color: "#4DED30",
+                    },
+                  },
+                },
+              }}
               renderCard={(card) => (
-                <View key ={card.id}  style={styles.card}>
+                <View key ={card.id}  style={[styles.card, styles.cardShadow]}>
                   
                 <Image 
-                  styles={{ width: 0, height: 0}}
+                  styles={{ width: 500, height: 0}}
                   source={require("../Images/Xenoblade2.png")}
                 />
+                  
                   
                   <Text>{card.name}</Text>
                   <Text>{card.genre}</Text>
                   <Text>{card.description}</Text>
+
                   <Text>Metacritic score: {card.metacritic}</Text>
                   <Text>Similar to games like: {card.similarTo}</Text>
                   <Text>Xbox: {card.xbox}</Text>
