@@ -33,6 +33,48 @@ const Dummy_Data =[
       id: 2,
       photoURL: "../Images/Persona5R.png",
   },
+
+  {
+    name: "Elden Ring",
+    genre: "RPG",
+    description: "Elden Ring is a 2022 action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment",
+    metacritic: 96,
+    similarTo: " Dark Souls ",
+    xbox: "yes",
+    playstation: "yes",
+    nintendo: "no",
+    PC: "yes",
+    id: 3,
+    photoURL: "../Images/EldenRing.png",
+},
+
+{
+  name: "Age of Empires IV",
+  genre: "RTS",
+  description: "Age of Empires IV is a real-time strategy video game developed by Relic Entertainment in partnership with World's Edge and published by Xbox Game Studios.",
+  metacritic: 95,
+  similarTo: " Star Craft ",
+  xbox: "no",
+  playstation: "no",
+  nintendo: "no",
+  PC: "yes",
+  id: 4,
+  photoURL: "../Images/AgeofEmpiresIV.png",
+},
+
+{
+  name: "Escape From Tarkov",
+  genre: "FPS",
+  description: "Escape from Tarkov is a multiplayer tactical first-person shooter video game in development by Battlestate Games for Windows.",
+  metacritic: null,
+  similarTo: " Hunt Showdown ",
+  xbox: "no",
+  playstation: "no",
+  nintendo: "no",
+  PC: "yes",
+  id: 5,
+  photoURL: "../Images/EscapeFromTarkov.png",
+},
 ];
 
 export default function HomeScreen({ navigation }) {
