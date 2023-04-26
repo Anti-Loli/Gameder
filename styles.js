@@ -7,7 +7,6 @@ export default StyleSheet.create({
         justifyContent: 'space-around',
         paddingRight: 87,
         paddingTop: 30,
-
       },
       logoImage:{
         height: 100,
@@ -17,5 +16,17 @@ export default StyleSheet.create({
         width: 80,
         height: 70,
         borderRadius: 10,
+        backgroundColor: "red",
       },
+      cardShadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 1,
+        },
+        shadowOpacity: 0.2,
+        shadowRadius: 1.41,
+
+        elevation: 2,
+      }
     });
