@@ -12,21 +12,24 @@ export default StyleSheet.create({
         height: 100,
         width:  150,
       },     
-      card: {
-        width: 80,
-        height: 70,
-        borderRadius: 10,
-        backgroundColor: "red",
+      cardImage:{
+        height: 200,
+        width:  200,
+        justifyContent: "center",
       },
-      cardShadow: {
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 1,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 1.41,
-
-        elevation: 2,
-      }
+      card: {
+        flex: 1,
+        borderRadius: 4,
+        borderWidth: 2,
+        borderColor: "#E8E8E8",
+        justifyContent: "center",
+        backgroundColor: "white",
+        alignItems: "center"
+      },
+      text: {
+        textAlign: "center",
+        fontSize: 16,
+        backgroundColor: "transparent"
+      },
+      
     });

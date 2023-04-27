@@ -9,7 +9,7 @@ const Dummy_Data =[
     {
         name: "Xenoblade Chronicles 2",
         genre: "JRPG",
-        description: "Xenoblade Chronicles 2 is a 2017 action role-playing game developed by Monolith Soft and published by Nintendo for the Nintendo Switch.",
+        description: "Xenoblade Chronicles 2 is a 2017 action role-playing game developed by Monolith Soft and published by Nintendo.",
         metacritic: 83,
         similarTo: "Dragon Quest",
         xbox: "no",
@@ -17,7 +17,8 @@ const Dummy_Data =[
         nintendo: "yes",
         PC: "no",
         id: 1,
-        photoURL: "../Images/Xenoblade2.png",
+        photoURL: require("../Images/Xenoblade2.png"),
+        buyLink: "https://www.amazon.com/Xenoblade-Chronicles-2-Nintendo-Switch/dp/B01MU9VUKN/ref=sr_1_1?crid=OB7OZZF2DF6P&keywords=xenoblade%2Bchronicles%2B2&qid=1682472436&sprefix=xenoblade%2Bchr%2Caps%2C88&sr=8-1&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc&th=1"
     },
 
     {
@@ -31,7 +32,8 @@ const Dummy_Data =[
       nintendo: "yes",
       PC: "yes",
       id: 2,
-      photoURL: "../Images/Persona5R.png",
+      photoURL: require("../Images/Persona5R.png"),
+      buyLink: "https://www.amazon.com/Persona-5-Royal-Standard-PlayStation/dp/B0BFDZDTJ8/ref=sr_1_1?keywords=persona+5+royal&qid=1682472528&sprefix=persona+5+%2Caps%2C89&sr=8-1",
   },
 ];
 
@@ -89,24 +91,21 @@ export default function HomeScreen({ navigation }) {
                 },
               }}
               renderCard={(card) => (
-                <View key ={card.id}  style={[styles.card, styles.cardShadow]}>
+                <View key ={card.id}  style={styles.card}>
                   
                 <Image 
-                  styles={{ width: 500, height: 0}}
-                  source={require("../Images/Xenoblade2.png")}
+                  style={styles.cardImage}
+                  source={card.photoURL}
                 />
-                  
-                  
-                  <Text>{card.name}</Text>
-                  <Text>{card.genre}</Text>
-                  <Text>{card.description}</Text>
-
-                  <Text>Metacritic score: {card.metacritic}</Text>
-                  <Text>Similar to games like: {card.similarTo}</Text>
-                  <Text>Xbox: {card.xbox}</Text>
-                  <Text>Playstation: {card.playstation}</Text>
-                  <Text>Nintendo Switch: {card.nintendo}</Text>
-                  <Text>PC: {card.PC}</Text>
+                  <Text style={styles.text}>{card.name}</Text>
+                  <Text style={styles.text}>{card.genre}</Text>
+                  <Text style={styles.text}>{card.description}</Text>
+                  <Text style={styles.text}>Metacritic score: {card.metacritic}</Text>
+                  <Text style={styles.text}>Similar to games like: {card.similarTo}</Text>
+                  <Text style={styles.text}>Xbox: {card.xbox}</Text>
+                  <Text style={styles.text}>Playstation: {card.playstation}</Text>
+                  <Text style={styles.text}>Nintendo Switch: {card.nintendo}</Text>
+                  <Text style={styles.text}>PC: {card.PC}</Text>
 
                 </View>
                 )}/>
