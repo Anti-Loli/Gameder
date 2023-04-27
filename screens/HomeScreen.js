@@ -1,7 +1,13 @@
-import React , {useLayoutEffect} from "react";
+/*
+  Gamder: tinder but for fingding new games to play
+  Developers: Hunter Hockman and David Waldron
+  Last updated: 5/2/2023
+  File Description: This is the Home.js file it handles the swiper object that is the main screen for the app
+*/
+import React from "react";
 import Swiper from "react-native-deck-swiper"
-import { View, Text, Image, Button, StatusBar, TouchableOpacity, SafeAreaView } from "react-native";
-import { Feather} from '@expo/vector-icons';
+import {View, Text, Image, TouchableOpacity} from "react-native";
+import {Feather} from '@expo/vector-icons';
 
 import styles from "../styles";
 

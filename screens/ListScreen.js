@@ -1,7 +1,12 @@
-import React , {useLayoutEffect} from "react";
-import Swiper from "react-native-deck-swiper"
-import { View, Text, Image, Button, StatusBar, TouchableOpacity, SafeAreaView, FlatList } from "react-native";
-import { Feather, MaterialCommunityIcons  } from '@expo/vector-icons';
+/*
+  Gamder: tinder but for fingding new games to play
+  Developers: Hunter Hockman and David Waldron
+  Last updated: 5/2/2023
+  File Description: This is the App.js file it handles the navigation to the other app screens 
+*/
+import React  from "react";
+import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
+import { Feather} from '@expo/vector-icons';
 import styles from "../styles";
 
 const testData = [
