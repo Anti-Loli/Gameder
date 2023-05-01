@@ -90,6 +90,12 @@ const Dummy_Data =[
 ];
 
 export default function HomeScreen({ navigation }) {
+  
+  //Restart function
+  const handleRestart = () =>{
+    NativeModules.DevSettings.reload();
+}
+  
   return (
     <View>
       <View style={styles.Header}>
