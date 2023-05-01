@@ -1,6 +1,6 @@
 import React , {useLayoutEffect} from "react";
 import Swiper from "react-native-deck-swiper"
-import { View, Text, Image, Button, StatusBar, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, Text, Image, Button, StatusBar, TouchableOpacity, SafeAreaView, NativeModules } from "react-native";
 import { Feather} from '@expo/vector-icons';
 
 import styles from "../styles";
@@ -84,6 +84,12 @@ const Dummy_Data =[
 ];
 
 export default function HomeScreen({ navigation }) {
+  
+  //Restart function
+  const handleRestart = () =>{
+    NativeModules.DevSettings.reload();
+}
+  
   return (
     <View>
       <View style={styles.Header}>

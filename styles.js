@@ -31,5 +31,10 @@ export default StyleSheet.create({
         fontSize: 16,
         backgroundColor: "transparent"
       },
+      gameList: {
+        flex: 1,
+        padding: 20,
+        margin: 10
+      },
       
     });
