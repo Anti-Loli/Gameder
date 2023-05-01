@@ -1,3 +1,9 @@
+/*
+  Gamder: tinder but for fingding new games to play
+  Developers: Hunter Hockman and David Waldron
+  Last updated: 5/2/2023
+  File Description: This is the App.js file it handles the navigation to the other app screens 
+*/
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
