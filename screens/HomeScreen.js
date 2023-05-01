@@ -6,17 +6,18 @@
 */
 import React from "react";
 import Swiper from "react-native-deck-swiper"
-import {View, Text, Image, TouchableOpacity} from "react-native";
+import {View, Text, Image, TouchableOpacity, DevSettings} from "react-native";
 import {Feather} from '@expo/vector-icons';
 
-import Dummy_Data from "./Dummy_Data";
+import Dummy_Data from "../Arrays/Dummy_Data";
 import styles from "../styles";
 
 export default function HomeScreen({ navigation }) {
   
   //Restart function
   const handleRestart = () =>{
-    NativeModules.DevSettings.reload();
+    alert('Restarting App. Please wait...');
+    DevSettings.reload();
 }
   
   return (
@@ -27,7 +28,7 @@ export default function HomeScreen({ navigation }) {
               <Feather name="list" size={24} color="black" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => handleRestart()}>
             <Image
               style={styles.logoImage}
               source={require("../Images/logo.png")} />
