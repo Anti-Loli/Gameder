@@ -1,5 +1,5 @@
 /*
-  Gamder: tinder but for fingding new games to play
+  Gamder: tinder but for finding new games to play
   Developers: Hunter Hockman and David Waldron
   Last updated: 5/2/2023
   File Description: This is the Home.js file it handles the swiper object that is the main screen for the app
@@ -10,10 +10,11 @@ import {View, Text, Image, TouchableOpacity, DevSettings} from "react-native";
 import {Feather} from '@expo/vector-icons';
 
 import Dummy_Data from "../Arrays/Dummy_Data";
+import savedSwipes from "../Arrays/Saved_Swipes";
 import styles from "../styles";
 
-export default function HomeScreen({ navigation }) {
-  
+export default function HomeScreen({ navigation }) 
+{
   //Restart function
   const handleRestart = () =>{
     alert('Restarting App. Please wait...');
@@ -48,8 +49,8 @@ export default function HomeScreen({ navigation }) {
               onSwipedLeft={() => {
                 console.log("Mid");
             }}
-              onSwipedRight={() => {
-                  console.log("Saved");
+              onSwipedRight={(index) => {
+                savedSwipes.push(index); //this takes the index of the swiped card and sends it to the savedSwipes array
               }}
               backgroundColor="red"
               overlayLabels={{
@@ -88,7 +89,6 @@ export default function HomeScreen({ navigation }) {
                   <Text style={styles.text}>Playstation: {card.playstation}</Text>
                   <Text style={styles.text}>Nintendo Switch: {card.nintendo}</Text>
                   <Text style={styles.text}>PC: {card.PC}</Text>
-
                 </View>
                 )}/>
 
