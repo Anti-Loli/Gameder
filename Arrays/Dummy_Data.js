@@ -1,3 +1,10 @@
+/*
+  Gamder: tinder but for finding new games to play
+  Developers: Hunter Hockman and David Waldron
+  Last updated: 5/2/2023
+  File Description: This array holds data for the home screens cards
+*/
+
 const Dummy_Data =[
     {
         name: "Xenoblade Chronicles 2",
@@ -9,7 +16,7 @@ const Dummy_Data =[
         playstation: "no",
         nintendo: "yes",
         PC: "no",
-        id: 1,
+        id: 0,
         photoURL: require("../Images/Xenoblade2.png"),
         buyLink: "https://www.amazon.com/Xenoblade-Chronicles-2-Nintendo-Switch/dp/B01MU9VUKN/ref=sr_1_1?crid=OB7OZZF2DF6P&keywords=xenoblade%2Bchronicles%2B2&qid=1682472436&sprefix=xenoblade%2Bchr%2Caps%2C88&sr=8-1&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc&th=1"
     },
@@ -24,7 +31,7 @@ const Dummy_Data =[
       playstation: "yes",
       nintendo: "yes",
       PC: "yes",
-      id: 2,
+      id: 1,
       photoURL: require("../Images/Persona5R.png"),
 
       buyLink: "https://www.amazon.com/Persona-5-Royal-Standard-PlayStation/dp/B0BFDZDTJ8/ref=sr_1_1?keywords=persona+5+royal&qid=1682472528&sprefix=persona+5+%2Caps%2C89&sr=8-1",
@@ -40,7 +47,7 @@ const Dummy_Data =[
     playstation: "yes",
     nintendo: "no",
     PC: "yes",
-    id: 3,
+    id: 2,
     photoURL: require("../Images/EldenRing.png"),
     buyLink: "https://www.amazon.com/Elden-Ring-PlayStation-5/dp/B09743F8P6?th=1",
 },
@@ -55,7 +62,7 @@ const Dummy_Data =[
   playstation: "no",
   nintendo: "no",
   PC: "yes",
-  id: 4,
+  id: 3,
   photoURL: require("../Images/AgeofEmpiresIV.png"),
   buyLink: "https://store.steampowered.com/app/1466860/Age_of_Empires_IV_Anniversary_Edition/",
 },
@@ -70,7 +77,7 @@ const Dummy_Data =[
   playstation: "no",
   nintendo: "no",
   PC: "yes",
-  id: 5,
+  id: 4,
   photoURL: require("../Images/EscapeFromTarkov.png"),
   buyLink: "https://www.escapefromtarkov.com/preorder-page",
 },

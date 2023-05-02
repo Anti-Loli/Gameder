@@ -1,22 +1,24 @@
 /*
-  Gamder: tinder but for fingding new games to play
+  Gamder: tinder but for finding new games to play
   Developers: Hunter Hockman and David Waldron
   Last updated: 5/2/2023
   File Description: This is the Home.js file it handles the swiper object that is the main screen for the app
 */
 import React from "react";
 import Swiper from "react-native-deck-swiper"
-import {View, Text, Image, TouchableOpacity} from "react-native";
+import {View, Text, Image, TouchableOpacity, DevSettings} from "react-native";
 import {Feather} from '@expo/vector-icons';
 
-import Dummy_Data from "./Dummy_Data";
+import Dummy_Data from "../Arrays/Dummy_Data";
+import savedSwipes from "../Arrays/Saved_Swipes";
 import styles from "../styles";
 
-export default function HomeScreen({ navigation }) {
-  
+export default function HomeScreen({ navigation }) 
+{
   //Restart function
   const handleRestart = () =>{
-    NativeModules.DevSettings.reload();
+    alert('Restarting App. Please wait...');
+    DevSettings.reload();
 }
   
   return (
@@ -27,7 +29,7 @@ export default function HomeScreen({ navigation }) {
               <Feather name="list" size={24} color="black" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => handleRestart()}>
             <Image
               style={styles.logoImage}
               source={require("../Images/logo.png")} />
@@ -47,8 +49,8 @@ export default function HomeScreen({ navigation }) {
               onSwipedLeft={() => {
                 console.log("Mid");
             }}
-              onSwipedRight={() => {
-                  console.log("Saved");
+              onSwipedRight={(index) => {
+                savedSwipes.push(index); //this takes the index of the swiped card and sends it to the savedSwipes array
               }}
               backgroundColor="red"
               overlayLabels={{
@@ -87,7 +89,6 @@ export default function HomeScreen({ navigation }) {
                   <Text style={styles.text}>Playstation: {card.playstation}</Text>
                   <Text style={styles.text}>Nintendo Switch: {card.nintendo}</Text>
                   <Text style={styles.text}>PC: {card.PC}</Text>
-
                 </View>
                 )}/>
 

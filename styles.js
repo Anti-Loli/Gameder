@@ -1,8 +1,8 @@
 /*
-  Gamder: tinder but for fingding new games to play
+  Gamder: tinder but for finding new games to play
   Developers: Hunter Hockman and David Waldron
   Last updated: 5/2/2023
-  File Description: This is the App.js file it handles the navigation to the other app screens 
+  File Description: This is the global styles sheet for the whole app 
 */
 import { StyleSheet } from "react-native";
 
@@ -13,6 +13,17 @@ export default StyleSheet.create({
         justifyContent: 'space-around',
         paddingRight: 87,
         paddingTop: 30,
+      },
+      item: {
+        backgroundColor: '#EEE',
+        padding: 20,
+        marginBottom: 10, 
+        borderRadius: 5,
+      },
+      listHeader: {
+        justifyContent: "center",
+        backgroundColor: "white",
+        alignItems: "center",
       },
       logoImage:{
         height: 100,
@@ -39,8 +50,11 @@ export default StyleSheet.create({
       },
       gameList: {
         flex: 1,
-        padding: 20,
-        margin: 10
+        paddingBottom: 50,
+        margin: 10,
+        justifyContent: "center",
+        backgroundColor: "white",
+        alignItems: "center",
       },
       
     });
